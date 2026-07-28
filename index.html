@@ -7,137 +7,249 @@
 <style>
   :root {
     --bg: #0d0a14;
-    --card: #1c1030;
-    --rose: #c9906a;
-    --fg: #f5ede4;
-    --muted: #b9aab6;
+    --card: #17121f;
+    --accent: #d9a066;
+    --text: #f2ece2;
+    --muted: #a89bb0;
+    --border: #2a2333;
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    background: linear-gradient(180deg, #0d0a14 0%, #1c1030 50%, #0d0a14 100%);
-    color: var(--fg);
+    background: var(--bg);
+    color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
   }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 96px; }
-  h1 { font-size: 28px; margin-bottom: 4px; }
-  .updated { color: var(--muted); font-size: 13px; margin-bottom: 40px; }
-  h2 {
-    color: var(--rose);
-    font-size: 17px;
-    margin-top: 36px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    padding-bottom: 8px;
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
   }
-  p, li { color: var(--fg); opacity: 0.92; font-size: 15px; }
-  ul { margin: 8px 0; padding-left: 22px; }
-  li { margin-bottom: 6px; }
-  a { color: var(--rose); }
-  .contact {
-    margin-top: 48px;
-    padding: 20px;
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 4px;
+  }
+  .updated {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+  }
+  .copy-bar {
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    padding: 12px 0;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+  button#copyBtn {
+    background: var(--accent);
+    color: #1a1420;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+  }
+  button#copyBtn:hover { opacity: 0.85; }
+  button#copyBtn.copied { background: #6fcf97; }
+  section {
     background: var(--card);
+    border: 1px solid var(--border);
     border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.08);
+    padding: 18px 20px;
+    margin-bottom: 14px;
+  }
+  section h2 {
+    font-size: 1.05rem;
+    color: var(--accent);
+    margin: 0 0 8px;
+  }
+  section p, section ul {
+    margin: 0;
+    color: var(--text);
+    font-size: 0.97rem;
+  }
+  ul { padding-left: 20px; margin-top: 6px; }
+  li { margin-bottom: 4px; }
+  a { color: var(--accent); }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 32px;
   }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>Privacy Policy — Soz</h1>
-  <p class="updated">Last updated: July 2026</p>
-
-  <h2>Overview</h2>
-  <p>Soz is a private mobile app designed for two bonded partners to share messages, photos, moods, and calls. This policy explains what we collect, why, and how it's protected.</p>
-
-  <h2>Information We Collect</h2>
-  <ul>
-    <li>An anonymous account identifier created automatically when you open the app (no email or phone number required to use Soz)</li>
-    <li>If you choose to link a Google account for backup: your name, email, and profile photo</li>
-    <li>Messages, photos, and voice notes you exchange with your partner</li>
-    <li>Mood selections, Tease Room activity, daily challenges, goals, and timeline events</li>
-    <li>Call metadata for audio/video calls (call audio/video itself is end-to-end encrypted peer-to-peer and is never stored)</li>
-    <li>A device push-notification token, used to deliver messages from your partner</li>
-    <li>Subscription/purchase status if you buy Soz Premium, verified through Google Play Billing</li>
-    <li>Basic crash and diagnostic reports (via Firebase Crashlytics) to help us fix bugs</li>
-    <li>Advertising identifiers and interaction data if you view ads (see "Advertising" below)</li>
-  </ul>
-
-  <h2>How We Use Your Information</h2>
-  <ul>
-    <li>To provide real-time messaging, calls, and mood sync between bonded partners</li>
-    <li>To display your shared vault of photos and voice notes</li>
-    <li>To deliver push notifications when your partner sends a message or changes their mood</li>
-    <li>To maintain your bonded connection through your private 6-digit Love PIN</li>
-    <li>To process and verify Premium subscription purchases</li>
-    <li>To diagnose and fix crashes or errors</li>
-    <li>We do not sell your personal data to third parties. Ever.</li>
-  </ul>
-
-  <h2>End-to-End Encryption</h2>
-  <p>Chat messages, vault media, and Partner's Wall posts are end-to-end encrypted: only you and your bonded partner hold the keys to decrypt them, and the keys live only on your devices. If you enable the optional Google Backup link, your decryption key is also backed up to your private account record so you don't lose access to old messages after reinstalling — turning this on trades a small amount of that guarantee for convenience, and it's entirely your choice.</p>
-
-  <h2>Data Storage</h2>
-  <p>Your data is stored using Google Firebase (Firestore database) and Cloudinary (photo/video hosting). Shared data is stored under a private, per-couple record accessible only to you and your bonded partner, enforced by server-side security rules.</p>
-
-  <h2>Data Shared With Your Partner</h2>
-  <p>The following is visible to your bonded partner only:</p>
-  <ul>
-    <li>Your display name and profile photo</li>
-    <li>Your current mood</li>
-    <li>Messages, photos, and voice notes you send</li>
-    <li>Your activity in shared features (Tease Room, goals, challenges, timeline)</li>
-  </ul>
-
-  <h2>Advertising</h2>
-  <p>Soz shows ads via Google AdMob to free users. AdMob may use advertising identifiers to show relevant ads, subject to the consent choice you make when prompted (required in the EU/UK/certain US states, per Google's User Messaging Platform). You can review or change your ad privacy choices at any time from Settings → Ad Privacy Options. Soz Premium removes ads entirely.</p>
-
-  <h2>Permissions</h2>
-  <p>Soz requests the following device permissions, only when needed:</p>
-  <ul>
-    <li>Camera — to take photos/videos to share</li>
-    <li>Microphone — to record voice notes and for audio/video calls</li>
-    <li>Photo/Video Library — to pick and save media</li>
-    <li>Push Notifications — to notify you of partner activity</li>
-  </ul>
-  <p>All permissions can be revoked at any time in your device settings.</p>
-
-  <h2>Data Retention</h2>
-  <p>Your data is retained as long as your account and bond exist. Deleting your account permanently removes your personal information, messages, and media from our servers. Breaking up with your partner (in-app) also permanently ends shared access to that data.</p>
-
-  <h2>Children's Privacy</h2>
-  <p>Soz is intended for adults only and is not directed to anyone under the age of 18. We do not knowingly collect personal information from anyone under 18. If you believe a minor has provided us with personal information, contact us and we'll delete it.</p>
-
-  <h2>Security</h2>
-  <p>We use server-side security rules that restrict all shared data to the two bonded partners only, end-to-end encryption for message/media content, and industry-standard authentication. No method of transmission or storage is 100% secure, but we work to protect your information using currently accepted industry standards.</p>
-
-  <h2>Third-Party Services</h2>
-  <p>Soz relies on the following third-party services, each governed by its own privacy policy:</p>
-  <ul>
-    <li>Google Firebase (data storage, authentication, crash reporting, push notifications)</li>
-    <li>Cloudinary (photo/video hosting)</li>
-    <li>Google AdMob (advertising)</li>
-    <li>Google Play Billing (subscription purchases)</li>
-    <li>Cloudflare Workers (backend processing for billing, media deletion, and calls)</li>
-  </ul>
-
-  <h2>Your Rights</h2>
-  <ul>
-    <li>Access the personal data we hold about you</li>
-    <li>Delete your account and all associated data (Settings → Delete Account)</li>
-    <li>Change your ad consent choices at any time</li>
-    <li>Turn off notifications at any time</li>
-    <li>Contact us with privacy concerns</li>
-  </ul>
-
-  <div class="contact">
-    <h2 style="margin-top:0; border-bottom:none;">Contact Us</h2>
-    <p>Questions about this policy or how we handle your data:<br>
-    <a href="mailto:sozcoupleapp@gmail.com">sozcoupleapp@gmail.com</a></p>
-    <p>We aim to respond within 7 business days.</p>
+  <div class="copy-bar">
+    <button id="copyBtn" onclick="copyPolicy()">📋 Copy full policy text</button>
   </div>
+
+  <h1>Soz — Privacy Policy</h1>
+  <div class="updated">Last updated: July 2026</div>
+
+  <div id="policyContent">
+
+  <section>
+    <h2>Overview</h2>
+    <p>Soz is a private mobile application designed exclusively for two bonded partners. We are committed to protecting your privacy and handling your personal data responsibly.</p>
+  </section>
+
+  <section>
+    <h2>Information We Collect</h2>
+    <ul>
+      <li>Google account information (name, email, profile photo) obtained through Google Sign-In</li>
+      <li>Messages and media (photos, videos, voice notes) exchanged between you and your partner</li>
+      <li>Mood selections, tease/challenge activity, and heart session activity</li>
+      <li>Device push notification token (to send you messages from your partner)</li>
+      <li>Device/advertising identifiers, collected by our advertising partner (Google AdMob) if you have not opted out — see "Advertising" below</li>
+      <li>Purchase records for optional Premium subscriptions, processed by Google Play Billing</li>
+      <li>App usage and crash/error data to improve performance and stability</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How We Use Your Information</h2>
+    <ul>
+      <li>To provide real-time messaging, calling, and mood sync between bonded partners</li>
+      <li>To display your shared vault of photos, videos, and voice notes</li>
+      <li>To deliver push notifications when your partner sends you a message or changes their mood</li>
+      <li>To maintain your bonded connection through our secure 6-digit Love PIN system</li>
+      <li>To show ads (free tier only) and to process optional Premium purchases</li>
+      <li>We do not sell your personal data to third parties. Ever.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>End-to-End Encryption</h2>
+    <p>Chat messages and Vault media are end-to-end encrypted on your device before they ever leave it, using a private key that is generated on your device and never transmitted to us. This means we cannot read your messages or view your Vault photos and videos, even if asked to — we simply don't hold the keys. Because the key lives only on your device, it does not automatically survive an uninstall/reinstall unless you've linked Google Backup for your account (Settings → Backup & Restore) beforehand.</p>
+  </section>
+
+  <section>
+    <h2>Data Storage</h2>
+    <p>Your account, profile, and app data are stored using Google Firebase (Firestore database and Firebase Authentication). Photos, videos, and voice notes are stored using Cloudinary, a third-party media hosting service — media is encrypted before upload where end-to-end encryption applies (see above). Call connection setup and some background processing run on Cloudflare Workers. Your shared data is scoped to your private partner-pair record, accessible only to you and your bonded partner.</p>
+  </section>
+
+  <section>
+    <h2>Data Shared with Your Partner</h2>
+    <p>The following information is visible to your bonded partner only:</p>
+    <ul>
+      <li>Your display name and profile photo</li>
+      <li>Your current mood</li>
+      <li>Messages, photos, videos, and voice notes you send in chat</li>
+      <li>Your heart session and tease/challenge activity</li>
+      <li>Your push notification token (used only to notify you)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Advertising</h2>
+    <p>Free-tier use of Soz includes ads served through Google AdMob. AdMob may collect device and advertising identifiers to serve and measure ads, including personalized ads where permitted. Before any ad is requested, we run Google's consent flow, which shows a consent/options form where required by your region (including the EEA, UK, and regulated US states). You can review or change your ad privacy choices at any time via Settings → Ad Privacy Options. Premium subscribers do not see ads.</p>
+  </section>
+
+  <section>
+    <h2>In-App Purchases</h2>
+    <p>Soz offers an optional Premium subscription, purchased and processed entirely through Google Play Billing. We receive purchase confirmation (needed to unlock Premium features) but never your payment card details — those are handled solely by Google Play.</p>
+  </section>
+
+  <section>
+    <h2>Permissions</h2>
+    <p>Soz requests the following device permissions:</p>
+    <ul>
+      <li>Camera — to take photos to share in chat and for video calls</li>
+      <li>Microphone — to record voice notes and for voice/video calls</li>
+      <li>Photo Library — to pick photos/videos and save received media</li>
+      <li>Push Notifications — to notify you of partner activity</li>
+    </ul>
+    <p style="margin-top:8px;">All permissions are requested only when needed and can be revoked at any time through your device settings.</p>
+  </section>
+
+  <section>
+    <h2>Data Retention</h2>
+    <p>Your data is retained as long as your account exists. When you delete your account, we permanently delete all your personal information, messages, and media from our servers. Your partner's data remains unaffected by your account deletion.</p>
+  </section>
+
+  <section>
+    <h2>Children's Privacy</h2>
+    <p>Soz is intended for adults only and is not directed to anyone under the age of 18. We do not knowingly collect personal information from anyone under 18. If you believe a minor has provided us with personal information, please contact us immediately so we can delete it.</p>
+  </section>
+
+  <section>
+    <h2>Security</h2>
+    <p>We implement industry-standard security measures including Firebase Security Rules that restrict data access to authenticated users only, so that only the two bonded partners can access their shared data. Chat and Vault content is additionally end-to-end encrypted (see above).</p>
+  </section>
+
+  <section>
+    <h2>Third-Party Services</h2>
+    <p>Soz uses the following third-party services:</p>
+    <ul>
+      <li>Google Firebase (data storage and authentication)</li>
+      <li>Google Sign-In (authentication)</li>
+      <li>Cloudinary (photo/video/voice-note hosting)</li>
+      <li>Cloudflare Workers (call connectivity and background processing)</li>
+      <li>Google AdMob (advertising, free tier only)</li>
+      <li>Google Play Billing (Premium subscription purchases)</li>
+      <li>Expo Push Notifications (notification delivery)</li>
+    </ul>
+    <p style="margin-top:8px;">These services have their own privacy policies which govern their use of your data.</p>
+  </section>
+
+  <section>
+    <h2>Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Access the personal data we hold about you (note: end-to-end encrypted chat/Vault content is not something we ourselves can access or view)</li>
+      <li>Delete your account and all associated data (via Settings → Delete Account)</li>
+      <li>Withdraw consent for notifications or ad personalization at any time</li>
+      <li>Contact us with privacy concerns</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>California Privacy Rights</h2>
+    <p>If you are a California resident, you may have rights under the CCPA/CPRA, including the right to know what personal information we collect and the right to opt out of the "sharing" of personal information for cross-context behavioral advertising. Ad personalization can be limited or turned off at any time via Settings → Ad Privacy Options. We do not sell personal information for money.</p>
+  </section>
+
+  <section>
+    <h2>International Users</h2>
+    <p>Soz is operated from India, and the third-party services we use (Google Firebase, Cloudinary, Cloudflare) process data on servers that may be located in other countries, including the United States. By using Soz, you consent to your information being processed in these locations.</p>
+  </section>
+
+  <section>
+    <h2>Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or how we handle your data, please contact us at:</p>
+    <p><a href="mailto:sozcoupleapp@gmail.com">sozcoupleapp@gmail.com</a></p>
+    <p>We will respond to your inquiry within 7 business days.</p>
+  </section>
+
+  </div>
+
+  <footer>© Soz — Private, encrypted, just for two.</footer>
 </div>
+
+<script>
+function copyPolicy() {
+  const el = document.getElementById('policyContent');
+  const text = el.innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.getElementById('copyBtn');
+    const original = btn.textContent;
+    btn.textContent = '✓ Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+</script>
 </body>
-  </html>
+</html>
