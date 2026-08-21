@@ -13,37 +13,21 @@
     margin: 0;
     padding: 0;
   }
-  .container {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 40px 20px 80px;
+  .container { max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; }
+  h1 { font-size: 26px; margin-bottom: 4px; }
+  .updated { font-size: 13px; color: #a89bb8; margin-bottom: 32px; }
+  h2 { font-size: 17px; color: #ff6b8b; margin-top: 32px; margin-bottom: 8px; }
+  p, li { font-size: 15px; color: #ded6e8; }
+  ul { padding-left: 20px; margin-top: 6px; }
+  a { color: #ff9db3; }
+  .delete-box {
+    background: #1a1424;
+    border: 1px solid #3a2c4a;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-top: 12px;
   }
-  h1 {
-    font-size: 26px;
-    margin-bottom: 4px;
-  }
-  .updated {
-    font-size: 13px;
-    color: #a89bb8;
-    margin-bottom: 32px;
-  }
-  h2 {
-    font-size: 17px;
-    color: #ff6b8b;
-    margin-top: 32px;
-    margin-bottom: 8px;
-  }
-  p, li {
-    font-size: 15px;
-    color: #ded6e8;
-  }
-  ul {
-    padding-left: 20px;
-    margin-top: 6px;
-  }
-  a {
-    color: #ff9db3;
-  }
+  .delete-box p:first-child { margin-top: 0; }
 </style>
 </head>
 <body>
@@ -104,7 +88,14 @@
   <p>All permissions are requested only when needed and can be revoked at any time through your device settings.</p>
 
   <h2>Data Retention</h2>
-  <p>Your data is retained as long as your account exists. When you delete your account, we permanently delete all your personal information, messages, and media from our servers. Your partner's data remains unaffected by your account deletion.</p>
+  <p>Your personal account data is retained as long as your account exists. When you delete your account, we permanently delete your profile and personal data from our servers. Shared chat and vault content between you and your former partner becomes inaccessible to both of you once your bond ends, though the underlying encrypted records may not be immediately erased from our servers. Your partner's own account and personal data remain unaffected by your account deletion.</p>
+
+  <h2 id="delete-account">Delete Account</h2>
+  <div class="delete-box">
+    <p><strong>In-app:</strong> Open Soz → Settings → Account → "Delete My Account & Data" and confirm. This permanently deletes your profile and personal data, and ends your current bond so your partner is unaffected and free to reconnect with someone else. This cannot be undone.</p>
+    <p><strong>Without opening the app:</strong> Email <strong>sozcoupleapp@gmail.com</strong> from the address associated with your account, with the subject line "Delete My Account", and we will process your deletion request within 7 business days. We may ask you to verify your identity first.</p>
+    <p>Shared chat and vault content becomes inaccessible to both partners once your bond ends, consistent with how ending a bond already works in the app, but is not necessarily erased from our servers immediately.</p>
+  </div>
 
   <h2>Children's Privacy</h2>
   <p>Soz is intended for adults only and is not directed to anyone under the age of 18. We do not knowingly collect personal information from anyone under 18. If you believe a minor has provided us with personal information, please contact us immediately so we can delete it.</p>
@@ -127,7 +118,7 @@
   <p>You have the right to:</p>
   <ul>
     <li>Access the personal data we hold about you</li>
-    <li>Delete your account and all associated data — via Settings → Delete Account in the app, or by requesting deletion at <a href="https://soz2203.github.io/Sozcoupleapp/#delete-account">https://soz2203.github.io/Sozcoupleapp/#delete-account</a> without needing to open the app</li>
+    <li>Delete your account and personal data — via Settings → Delete My Account & Data in the app, or by <a href="#delete-account">emailing us</a> if you no longer have the app installed</li>
     <li>Withdraw consent for notifications at any time</li>
     <li>Contact us with privacy concerns</li>
   </ul>
