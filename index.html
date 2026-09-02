@@ -5,122 +5,201 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Soz — Privacy Policy</title>
 <style>
+  :root {
+    --bg: #0d0a14;
+    --card: #17121f;
+    --text: #e8dde8;
+    --muted: #9e8a9a;
+    --rose: #e0648a;
+    --gold: #d9a441;
+    --border: rgba(255,255,255,0.08);
+  }
+  * { box-sizing: border-box; }
   body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
     max-width: 720px;
     margin: 0 auto;
-    padding: 40px 20px 80px;
-    line-height: 1.6;
-    color: #1a1a1a;
-    background: #ffffff;
+    padding: 48px 20px 80px;
   }
-  h1 { font-size: 26px; margin-bottom: 4px; }
-  .last-updated { color: #666; font-size: 14px; margin-bottom: 32px; }
-  h2 { font-size: 17px; margin-top: 32px; margin-bottom: 8px; color: #6b21a8; }
-  p, li { font-size: 15px; }
-  ul { padding-left: 20px; }
-  a { color: #6b21a8; }
+  h1 {
+    font-size: 28px;
+    margin: 0 0 6px;
+    background: linear-gradient(90deg, var(--gold), var(--rose));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .updated {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0 0 36px;
+  }
+  section {
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-of-type {
+    border-bottom: none;
+  }
+  h2 {
+    font-size: 16px;
+    color: var(--rose);
+    margin: 0 0 10px;
+  }
+  p {
+    font-size: 14.5px;
+    color: var(--text);
+    opacity: 0.92;
+    margin: 0 0 10px;
+    white-space: pre-line;
+  }
+  a { color: var(--gold); }
+  footer {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+  }
 </style>
 </head>
 <body>
+<div class="wrap">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: September 2026</p>
 
-<h1>Privacy Policy</h1>
-<p class="last-updated">Last updated: August 2026</p>
+  <section>
+    <h2>Overview</h2>
+    <p>Soz is a private mobile application designed exclusively for two bonded partners. We are committed to protecting your privacy and handling your personal data responsibly.</p>
+  </section>
 
-<h2>Overview</h2>
-<p>Soz is a private mobile application designed exclusively for two bonded partners. We are committed to protecting your privacy and handling your personal data responsibly.</p>
+  <section>
+    <h2>Information We Collect</h2>
+    <p>• Messages and media (photos, videos, voice notes) exchanged between you and your partner
+• Mood selections, tease/challenge activity, and heart session activity
+• Device push notification token (to send you messages from your partner)
+• Purchase records for optional Premium subscriptions, processed by Google Play Billing
+• App usage and crash/error data to improve performance and stability</p>
+  </section>
 
-<h2>Information We Collect</h2>
-<ul>
-  <li>Messages and media (photos, videos, voice notes) exchanged between you and your partner</li>
-  <li>Mood selections, tease/challenge activity, and heart session activity</li>
-  <li>Device push notification token (to send you messages from your partner)</li>
-  <li>Purchase records for optional Premium subscriptions, processed by Google Play Billing</li>
-  <li>App usage and crash/error data to improve performance and stability</li>
-</ul>
+  <section>
+    <h2>How We Use Your Information</h2>
+    <p>• To provide real-time messaging, calling, and mood sync between bonded partners
+• To display your shared vault of photos, videos, and voice notes
+• To deliver push notifications when your partner sends you a message or changes their mood
+• To maintain your bonded connection through our secure 6-digit Love PIN system
+• We do not sell your personal data to third parties. Ever.</p>
+  </section>
 
-<h2>How We Use Your Information</h2>
-<ul>
-  <li>To provide real-time messaging, calling, and mood sync between bonded partners</li>
-  <li>To display your shared vault of photos, videos, and voice notes</li>
-  <li>To deliver push notifications when your partner sends you a message or changes their mood</li>
-  <li>To maintain your bonded connection through our secure 6-digit Love PIN system</li>
-  <li>We do not sell your personal data to third parties. Ever.</li>
-</ul>
+  <section>
+    <h2>Encryption</h2>
+    <p>Chat messages and Vault media are protected in transit by standard HTTPS/TLS, and encrypted at rest using a random secret key generated uniquely for your couple when you bond. This is NOT end-to-end encryption: your couple's key is stored on our servers, not only on your devices, so it is not derived from anything only you and your partner know or hold. In practice this means: no other user, and nobody reading a database export or backup, can read your chat or Vault content without your couple's specific key — but Soz's own backend, operating with full database administrative access, technically retains the ability to access it, as does anyone who compromises that administrative access or compels its disclosure. Access in normal use is restricted by both this per-couple encryption and account-level security rules to the two bonded partners. If you reinstall the app or switch phones and reconnect using your Love PIN, your account and bond reconnect immediately, but your chat and Vault content stays locked on that new device until your partner approves it (or, if you skip that step, until you request it again and they approve). This partner-approval step is an access control enforced by our servers, not just an on-screen prompt.</p>
+  </section>
 
-<h2>Encryption</h2>
-<p>Chat messages and Vault media are protected in transit by standard HTTPS/TLS, and encrypted at rest using a random secret key generated uniquely for your couple when you bond. This is NOT end-to-end encryption: your couple's key is stored on our servers, not only on your devices, so it is not derived from anything only you and your partner know or hold. In practice this means: no other user, and nobody reading a database export or backup, can read your chat or Vault content without your couple's specific key — but Soz's own backend, operating with full database administrative access, technically retains the ability to access it, as does anyone who compromises that administrative access or compels its disclosure. Access in normal use is restricted by both this per-couple encryption and account-level security rules to the two bonded partners. If you reinstall the app or switch phones and reconnect using your Love PIN, your account and bond reconnect immediately, but your chat and Vault content stays locked on that new device until your partner approves it (or, if you skip that step, until you request it again and they approve). This partner-approval step is an access control enforced by our servers, not just an on-screen prompt.</p>
+  <section>
+    <h2>Data Storage</h2>
+    <p>Your account, profile, and app data are stored with our cloud database and authentication provider. Photos, videos, and voice notes are stored with a third-party media hosting service, as opaque encrypted ciphertext (see Encryption above). Call connection setup and some background processing run on a third-party serverless platform. Your shared data is scoped to your private partner-pair record, restricted by access-control rules to you and your bonded partner. See Third-Party Services below for the specific providers we use.</p>
+  </section>
 
-<h2>Data Storage</h2>
-<p>Your account, profile, and app data are stored with our cloud database and authentication provider. Photos, videos, and voice notes are stored with a third-party media hosting service, as opaque encrypted ciphertext (see Encryption above). Call connection setup and some background processing run on a third-party serverless platform. Your shared data is scoped to your private partner-pair record, restricted by access-control rules to you and your bonded partner. See Third-Party Services below for the specific providers we use.</p>
+  <section>
+    <h2>Data Shared with Your Partner</h2>
+    <p>The following information is visible to your bonded partner only:
+• Your display name and profile photo
+• Your current mood
+• Messages, photos, videos, and voice notes you send in chat
+• Your heart session and tease/challenge activity
+• Your push notification token (used only to notify you)
+• A pending device-restore request if you reinstall the app or switch phones, so they can approve your new device — including if you choose to skip that request, so they know your chat and Vault history is intentionally still locked rather than missing</p>
+  </section>
 
-<h2>Data Shared with Your Partner</h2>
-<p>The following information is visible to your bonded partner only:</p>
-<ul>
-  <li>Your display name and profile photo</li>
-  <li>Your current mood</li>
-  <li>Messages, photos, videos, and voice notes you send in chat</li>
-  <li>Your heart session and tease/challenge activity</li>
-  <li>Your push notification token (used only to notify you)</li>
-  <li>A pending device-restore request if you reinstall the app or switch phones, so they can approve your new device — including if you choose to skip that request, so they know your chat and Vault history is intentionally still locked rather than missing</li>
-</ul>
+  <section>
+    <h2>In-App Purchases</h2>
+    <p>Soz offers an optional Premium subscription, purchased and processed entirely through Google Play Billing. We receive purchase confirmation (needed to unlock Premium features) but never your payment card details — those are handled solely by Google Play.</p>
+  </section>
 
-<h2>In-App Purchases</h2>
-<p>Soz offers an optional Premium subscription, purchased and processed entirely through Google Play Billing. We receive purchase confirmation (needed to unlock Premium features) but never your payment card details — those are handled solely by Google Play.</p>
+  <section>
+    <h2>Referral Program</h2>
+    <p>If you choose to enter a friend's referral code, we store which code you entered and a link between your account and the account that referred you. This is used solely to verify eligibility for the referral reward and to show the referring user, in their own Settings → Invite &amp; Earn, who has used their code. This information is not shared with third parties and is deleted along with the rest of your account data if you delete your account.</p>
+  </section>
 
-<h2>Permissions</h2>
-<p>Soz requests the following device permissions:</p>
-<ul>
-  <li>Camera — to take photos to share in chat and for video calls</li>
-  <li>Microphone — to record voice notes and for voice/video calls</li>
-  <li>Photo Library — to pick photos/videos and save received media</li>
-  <li>Push Notifications — to notify you of partner activity</li>
-  <li>Bluetooth — to route call audio to connected headphones/earbuds during voice and video calls</li>
-</ul>
-<p>All permissions are requested only when needed and can be revoked at any time through your device settings.</p>
+  <section>
+    <h2>Permissions</h2>
+    <p>Soz requests the following device permissions:
 
-<h2>Data Retention</h2>
-<p>Your data is retained as long as your account exists. When you delete your account, we permanently delete all your personal information, messages, and media from our servers. Your partner's data remains unaffected by your account deletion.</p>
+• Camera — to take photos to share in chat and for video calls
+• Microphone — to record voice notes and for voice/video calls
+• Photo Library — to pick photos/videos and save received media
+• Push Notifications — to notify you of partner activity
+• Bluetooth — to route call audio to connected headphones/earbuds during voice and video calls
 
-<h2>Children's Privacy</h2>
-<p>Soz is intended for adults only and is not directed to anyone under the age of 18. We do not knowingly collect personal information from anyone under 18. If you believe a minor has provided us with personal information, please contact us immediately so we can delete it.</p>
+All permissions are requested only when needed and can be revoked at any time through your device settings.</p>
+  </section>
 
-<h2>Security</h2>
-<p>We implement industry-standard access-control measures that restrict data access to authenticated users only, so that only the two bonded partners can access their shared data in normal use, combined with per-couple encryption at rest for chat and Vault content (see Encryption above).</p>
+  <section>
+    <h2>Data Retention</h2>
+    <p>Your data is retained as long as your account exists. When you delete your account, we permanently delete all your personal information, messages, and media from our servers. Your partner's data remains unaffected by your account deletion.</p>
+  </section>
 
-<h2>Third-Party Services</h2>
-<p>Soz uses third-party service providers to help us operate the app, including:</p>
-<ul>
-  <li>Cloud storage and authentication providers</li>
-  <li>Media hosting providers (for photos, videos, and voice notes)</li>
-  <li>Cloud computing providers (for call connectivity and background processing)</li>
-  <li>Payment providers, via Google Play Billing</li>
-  <li>Notification delivery providers</li>
-</ul>
-<p>These providers have their own privacy policies which govern their use of your data.</p>
+  <section>
+    <h2>Children's Privacy</h2>
+    <p>Soz is intended for adults only and is not directed to anyone under the age of 18. We do not knowingly collect personal information from anyone under 18. If you believe a minor has provided us with personal information, please contact us immediately so we can delete it.</p>
+  </section>
 
-<h2>Your Rights</h2>
-<p>You have the right to:</p>
-<ul>
-  <li>Access the personal data we hold about you</li>
-  <li>Delete your account and personal data — via Settings → Delete My Account &amp; Data in the app, which also ends your current bond, or by emailing us if you no longer have the app installed</li>
-  <li>Withdraw consent for notifications at any time</li>
-  <li>Contact us with privacy concerns</li>
-</ul>
+  <section>
+    <h2>Security</h2>
+    <p>We implement industry-standard access-control measures that restrict data access to authenticated users only, so that only the two bonded partners can access their shared data in normal use, combined with per-couple encryption at rest for chat and Vault content (see Encryption above).</p>
+  </section>
 
-<h2>Deleting Your Account</h2>
-<p>Settings → Delete My Account &amp; Data permanently removes your profile and personal data from our servers, and ends your current bond so your partner is unaffected and free to reconnect with someone else. Shared chat and vault content becomes inaccessible to both partners once the bond ends, consistent with how ending a bond already works, though it is not necessarily erased from our servers immediately. If you no longer have the app installed, email <a href="mailto:sozcoupleapp@gmail.com">sozcoupleapp@gmail.com</a> with the subject line "Delete My Account" and we will process your request within 7 business days.</p>
+  <section>
+    <h2>Third-Party Services</h2>
+    <p>Soz uses third-party service providers to help us operate the app, including:
+• Cloud storage and authentication providers
+• Media hosting providers (for photos, videos, and voice notes)
+• Cloud computing providers (for call connectivity and background processing)
+• Payment providers, via Google Play Billing
+• Notification delivery providers
 
-<h2>California Privacy Rights</h2>
-<p>If you are a California resident, you may have rights under the CCPA/CPRA, including the right to know what personal information we collect. We do not sell or share personal information for money or for cross-context behavioral advertising.</p>
+These providers have their own privacy policies which govern their use of your data.</p>
+  </section>
 
-<h2>International Users</h2>
-<p>Soz is operated from India, and the third-party service providers we use process data on servers that may be located in other countries, including the United States. By using Soz, you consent to your information being processed in these locations.</p>
+  <section>
+    <h2>Your Rights</h2>
+    <p>You have the right to:
+• Access the personal data we hold about you
+• Delete your account and personal data — via Settings → Delete My Account &amp; Data in the app, which also ends your current bond, or by emailing us if you no longer have the app installed
+• Withdraw consent for notifications at any time
+• Contact us with privacy concerns</p>
+  </section>
 
-<h2>Contact Us</h2>
-<p>If you have any questions about this Privacy Policy or how we handle your data, please contact us at:</p>
-<p><a href="mailto:sozcoupleapp@gmail.com">sozcoupleapp@gmail.com</a></p>
-<p>We will respond to your inquiry within 7 business days.</p>
+  <section>
+    <h2>Deleting Your Account</h2>
+    <p>Settings → Delete My Account &amp; Data permanently removes your profile and personal data from our servers, and ends your current bond so your partner is unaffected and free to reconnect with someone else. Shared chat and vault content becomes inaccessible to both partners once the bond ends, consistent with how ending a bond already works, though it is not necessarily erased from our servers immediately. If you no longer have the app installed, email <a href="mailto:sozcoupleapp@gmail.com">sozcoupleapp@gmail.com</a> with the subject line "Delete My Account" and we will process your request within 7 business days.</p>
+  </section>
 
+  <section>
+    <h2>California Privacy Rights</h2>
+    <p>If you are a California resident, you may have rights under the CCPA/CPRA, including the right to know what personal information we collect. We do not sell or share personal information for money or for cross-context behavioral advertising.</p>
+  </section>
+
+  <section>
+    <h2>International Users</h2>
+    <p>Soz is operated from India, and the third-party service providers we use process data on servers that may be located in other countries, including the United States. By using Soz, you consent to your information being processed in these locations.</p>
+  </section>
+
+  <section>
+    <h2>Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or how we handle your data, please contact us at:</p>
+    <p><a href="mailto:sozcoupleapp@gmail.com">sozcoupleapp@gmail.com</a></p>
+    <p>We will respond to your inquiry within 7 business days.</p>
+  </section>
+
+  <footer>© 2026 Soz. All rights reserved.</footer>
+</div>
 </body>
 </html>
